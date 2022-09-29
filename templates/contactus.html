@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}Contact Us |{% endblock title %}
+{% block body %} 
+
+<!-- Contact starts -->
+<section class="contact section-padding" id="contact">
+    <div class="container fluid mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header text-center pb-5">
+                    <h2>Contact Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur<br>
+                    adipisicing elit. Non, quo.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row m-0">
+            <div class="col-md-12 p-0 pt-4 pb-4">
+            </div>
+        </div>
+                <!--for getting the form download the code from download button-->
+                    
+                        <form class="row gy-2  align-items-center" method="post" action="/contact">
+                        {% csrf_token %}
+                            <div>
+                            <label class="visually-hidden" for="name"></label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
+                            </div>
+                            <div>
+                                <label class="visually-hidden" for="email"></label>
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email">
+                                </div>
+                                <div>
+                                    <label class="visually-hidden" for="ph"></label>
+                                    <input type="text" class="form-control" id="ph" name="ph" placeholder="Enter Phone Number">
+                                    </div>
+                            
+                            
+                           
+                          
+                            <div class="form-check">
+                            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button type="submit" class="btn btn-primary"><span>Submit</span></button>
+                            </div>
+                        </form>
+                </div>
+            
+   
+</section><!-- contact ends -->
+{% endblock body %} 
